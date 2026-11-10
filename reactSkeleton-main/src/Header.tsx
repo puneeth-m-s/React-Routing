@@ -5,10 +5,13 @@ export function Header() {
     <>
       <div>
         <header>
-          <img src={Logo} alt="Logo" className="inline-block h-20" />
+          <NavLink to="/products">
+            <img src={Logo} alt="Logo" className="inline-block h-20" />
+          </NavLink>
+
           <h1 className="text-2xl"> React Tools</h1>
           <nav>
-            <Link to="Products">Products</Link>
+            <Link to="/products">Products</Link>
           </nav>
         </header>
       </div>
