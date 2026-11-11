@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { products } from '../data/products';
 
 export function ProductsPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('search'));
   return (
     <div className="text-center p-5 text-xl">
       <h2 className="text-base text-slate-600"> Here are some great tools to work with React </h2>
