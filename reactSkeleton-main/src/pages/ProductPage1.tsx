@@ -11,5 +11,18 @@ export function ProductPage1() {
   const id = params.id === undefined ? undefined : parseInt(params.id);
   const requiredProduct = products.find((product) => product.id === id);
   console.log(requiredProduct);
-  return <div> Placeholder </div>;
+  return (
+    <div>
+      {' '}
+      {requiredProduct === undefined ? (
+        <h1>unknown product</h1>
+      ) : (
+        <>
+          <h1>{requiredProduct.name}</h1>
+          <p>{requiredProduct.description}</p>
+          <p>{requiredProduct.price}</p>
+        </>
+      )}{' '}
+    </div>
+  );
 }
